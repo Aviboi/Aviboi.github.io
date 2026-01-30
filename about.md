@@ -1,3 +1,8 @@
+---
+layout: default
+title: Avram Dreyer
+---
+
 # About Me
 I am currently a freshman at the Cornell College of Engineering. Some of my interests include mechanical and aerospace engineering and applied physics.
 
