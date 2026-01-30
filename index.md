@@ -7,7 +7,7 @@ title: Avram Dreyer
 I am a student at Cornell University studying Mechanical Engineering.
 
 - Email
-- Linkedin
+- [Linkedin](https://www.linkedin.com/in/avramdreyer/)
 - CV
 - Resume
 - About
