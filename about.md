@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Avram Dreyer
+title: About
 ---
 
 # About Me
