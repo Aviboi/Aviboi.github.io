@@ -6,7 +6,7 @@ title: Avram Dreyer
 # Hi, my name is Avram Dreyer
 I am a student at Cornell University studying Mechanical Engineering. I am interested in applied physics, mechanical and aerospace engineering, and computer science.
 
-<img src="headshot.jpg" width="200">
+<img src="headshot.jpg" width="150">
 
 - <a href="email.md" target="_blank" rel="noopener noreferrer">Email</a>
 - <a href="https://www.linkedin.com/in/avramdreyer/" target="_blank" rel="noopener noreferrer">Linkedin</a>
