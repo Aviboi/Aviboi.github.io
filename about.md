@@ -10,3 +10,5 @@ Fun facts:
 - I have a twin brother
 - My favorite flavor of Laffy Taffy is banana
 - I have two cats
+
+[Back to homepage](/index.md)

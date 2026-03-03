@@ -24,3 +24,5 @@ This presents a tradeoff between the length of the handles and the size of the r
 The final note is that for usability, our device should include a flair with teeth to prevent the nut from sliding out of the device under load, enabling sufficient force to be applied.
 
 Many of the constraints relating to grip strength and hand size ensure that our device is as usable as possible, even if it reduces the mechanical advantage of our mechanism. While we do value force amplification, we also value other traits such as compactness and one-handed operation, which may be impacted. So, we should consider all of these aspects when creating our design.
+
+[Back to Projects](/projects.md)
