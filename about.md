@@ -9,4 +9,4 @@ I am currently a freshman at the Cornell College of Engineering. Some of my inte
 Fun facts:
 - I have a twin brother
 - My favorite flavor of Laffy Taffy is banana
-- I hate cooking
+- I have two cats
