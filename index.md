@@ -3,7 +3,7 @@ layout: default
 title: Avram Dreyer
 ---
 
-<img align="right" src="/images/headshot.jpg" width="150">
+<img align="right" border-radius=15px src="/images/headshot.jpg" width="150">
 
 # Hi, my name is Avram Dreyer
 I am a student at Cornell University studying Mechanical Engineering. I am interested in applied physics, mechanical and aerospace engineering, and computer science.
