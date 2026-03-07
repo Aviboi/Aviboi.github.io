@@ -6,7 +6,7 @@ subtitle: Cornell University, Ithaca, NY
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: headshot.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>Ithaca, NY</p>
