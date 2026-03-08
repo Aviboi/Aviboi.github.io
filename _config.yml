@@ -142,6 +142,9 @@ exclude:
   - _pages/blog.md
   - _posts/
   - assets/jupyter/blog.ipynb
+  - _pages/profiles.md
+  - _pages/books.md  # if you don't use the bookshelf
+  
 keep_files:
   - CNAME
   - .nojekyll
