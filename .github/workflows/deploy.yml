@@ -76,7 +76,7 @@ jobs:
         with:
           ruby-version: "3.2.2"
           bundler-cache: false
-          
+
       - name: Verify Ruby version 🔍
         run: ruby --version
 

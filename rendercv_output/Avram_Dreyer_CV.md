@@ -4,7 +4,6 @@
 - Email: [ajd335@cornell.edu](mailto:ajd335@cornell.edu)
 - Website: [avramdreyer.com](https://avramdreyer.com/)
 
-
 # Education
 
 ## Cornell University, BS in Mechanical Engineering

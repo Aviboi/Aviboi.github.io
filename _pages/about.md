@@ -15,7 +15,6 @@ profile:
 
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
-
 ---
 
 Hi there! My name is Avram Dreyer and I am a mechanical engineering student at Cornell University, who is interested in fluid dynamics, applied physics, and aerospace. On this webpage you can find a short compilation of my projects, along with my CV and any other relevant information.
