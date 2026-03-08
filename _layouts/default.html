@@ -9,6 +9,9 @@
 
     <!-- Add favicon -->
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    {% if site.google_analytics and jekyll.environment == 'production' %}
+    {% include analytics.html %}
+    {% endif %}
   </head>
   <body>
     <div class="container-lg px-3 my-5 markdown-body">{{ content }}</div>
