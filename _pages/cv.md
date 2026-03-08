@@ -6,6 +6,6 @@ nav: true
 nav_order: 5
 ---
 
-<meta http-equiv="refresh" content="0; url="/assets/pdf/Avram_Dreyer_CV.pdf"">
+<script>window.location.replace("/assets/pdf/Avram_Dreyer_CV.pdf");</script>
 
 Redirecting to CV... If not redirected, [click here](/assets/pdf/Avram_Dreyer_CV.pdf).

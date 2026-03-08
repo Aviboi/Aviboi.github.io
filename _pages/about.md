@@ -9,8 +9,8 @@ profile:
   image: headshot.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <a href="https://www.linkedin.com/in/avramdreyer/">LinkedIn</a>
-    <a href="https://github.com/Aviboi">Github</a>
+    <a href="https://www.linkedin.com/in/avramdreyer/">LinkedIn</a></br>
+    <a href="https://github.com/Aviboi">Github</a></br>
     <a href="mailto:ajd335@cornell.edu">ajd335@cornell.edu</a>
 
 selected_papers: false # includes a list of papers marked as "selected={true}"
