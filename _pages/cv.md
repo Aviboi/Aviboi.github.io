@@ -1,12 +1,12 @@
 ---
-layout: cv
+layout: page
 permalink: /cv/
 title: CV
 nav: true
 nav_order: 5
-cv_pdf: /assets/img/cv.pdf" # you can also use external links here
-cv_format: rendercv # options: rendercv, jsonresume
-description: This is a description of the page. You can modify it in '_pages/cv.md'. You can also change or remove the top pdf download button.
-toc:
-  sidebar: left
 ---
+
+<meta http-equiv="refresh" content="0; url="/assets/pdf/Avram_Dreyer_CV.pdf"">
+
+Redirecting to CV... If not redirected,
+<a href="/assets/pdf/Avram_Dreyer_CV.pdf.pdf">click here</a>.
