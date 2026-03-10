@@ -8,8 +8,6 @@ category: work
 related_publications: false
 ---
 
-# ENGRD 2020 Nutcracker Design Project
-
 ## **Problem statement:**
 
 As part of my introductory statics course at Cornell, ENGRD 2020, I was tasked with designing a handheld nutcracker to be used to crack macadamia nuts.
@@ -45,7 +43,7 @@ $$L = \sqrt{H^2 + D^2} = \sqrt{(2.03 in)^2 + (5.434 in)^2} = 5.86 in$$
 <br>
 For the final design, we can bump the handle length up to 6.00 inches, with the teeth 1 inch from the hinge, which should add some wiggle room for the mechanical advantage.
 
-<img src="/images/diagram.png" width="300">
+<img src="/assets/img/diagram.png" width="300">
 
 ### **Discussion of usability:**
 
