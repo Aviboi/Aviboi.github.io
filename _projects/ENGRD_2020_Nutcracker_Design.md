@@ -1,6 +1,11 @@
 ---
-layout: default
+layout: page
 title: ENGRD 2020 Nutcracker Design
+description: A short design project as part of my introductory statics course at Cornell.
+img: assets/img/diagram.png
+importance: 1
+category: work
+related_publications: false
 ---
 
 # ENGRD 2020 Nutcracker Design Project
@@ -47,5 +52,3 @@ For the final design, we can bump the handle length up to 6.00 inches, with the 
 The final note is that for usability, our device should include a flair with teeth to prevent the nut from sliding out of the device under load, enabling sufficient force to be applied.
 
 Many of the constraints relating to grip strength and hand size ensure that our device is as usable as possible, even if it reduces the mechanical advantage of our mechanism. While we do value force amplification, we also value other traits such as compactness and one-handed operation, which may be impacted. So, we should consider all of these aspects when creating our design.
-
-[Back to Projects](/Projects)
