@@ -6,6 +6,7 @@ on:
     paths:
       - "_data/Avram_Dreyer_Resume.yaml"
       - "requirements.txt"
+      - ".github/workflows/render.yaml"
   workflow_dispatch:
 
 permissions:
