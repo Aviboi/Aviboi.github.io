@@ -40,13 +40,13 @@ jobs:
       - name: Render CV
         run: |
           rendercv render "_data/Avram_Dreyer_Resume.yaml" \
-            --pdf-path "assets/pdf/Avram_Dreyer_CV.pdf" \
+            --pdf-path "assets/pdf/resume.pdf" \
             --dont-generate-png
 
       - name: Commit rendered CV
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add resume/resume.pdf resume/resume.typ
+          git add assets/pdf/resume.pdf assets/typ/resume.typ
           git diff --staged --quiet || git commit -m "chore: re-render CV [skip ci]"
           git push
