@@ -37,9 +37,9 @@ jobs:
       - name: Render CV
         run: |
           rendercv render _data/Avram_Dreyer_Resume.yaml \
-            --output-folder resume \
-            --pdf-path resume/resume.pdf \
-            --typst-path resume/resume.typ \
+            --output-folder $resume \
+            --pdf-path $resume/resume.pdf \
+            --typst-path $resume/resume.typ \
             --dont-generate-png
       - name: Copy index page
         run: cp index.html site/index.html   # see Step 3
