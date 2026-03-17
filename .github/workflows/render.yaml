@@ -36,7 +36,7 @@ jobs:
 
       - name: Render CV
         run: |
-          rendercv render Avram_Dreyer_Resume.yaml \
+          rendercv render _data/Avram_Dreyer_Resume.yaml \
             --rendercv_output \
             --resume/resume.pdf \
             --resume/resume.typ \

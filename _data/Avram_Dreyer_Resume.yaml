@@ -1,0 +1,230 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.3/schema.json
+cv:
+  name: "Avram Dreyer"
+  email: "ajd335@cornell.edu"
+  phone: "+12018989735"
+  website: "https://avramdreyer.com"
+  sections:
+    education:
+      - institution: "Cornell University"
+        area: "Mechanical Engineering"
+        degree: "BS"
+        start_date: "2025-08"
+        end_date: "2029-05"
+        location: "Ithaca, NY"
+        highlights:
+          - "**GPA: 4.06/4.3;** ASME, Cornell Astronomical Society, Amateur Radio
+            Club, Cornell Maker Club"
+          - "***Relevant Coursework:*** Statics, Differential Equations, Intro to Computing, Intro to Lasers and Photonics"
+      - institution: "Bergen County Technical High School"
+        area: "Aerospace Engineering"
+        degree: Diploma
+        start_date: "2020-09"
+        end_date: "2025-06"
+        location: "Teterboro, NJ"
+        highlights:
+          - "**GPA: 3.99/4.0;** National Honor Society, High Honor Roll,
+            Departmental Award for Physics"
+ 
+    projects:
+      - name: "Satellite Thermal Heatsink"
+        start_date: "2024-09"
+        end_date: "2025-04"
+        location: "Houston, TX"
+        highlights:
+          - "Collaborated to design and build a novel thermal management system for a 1U CubeSat satellite."
+          - "Designed in Fusion360 and thermal analysis with ANSYS Mechanical. Fabricated using custom brass plates and pipes."
+          - "Selected as one of five finalist teams in the nation for the NASA HUNCH space hardware design competition."
+          - "Presented at Johson Space Center to NASA engineers for potential implementation in flight hardware."
+    technical_experience:
+      - company: Cornell Autonomous Sailboat Team
+        position: Mechanical Subteam Member
+        start_date: "2026-02"
+        location: Ithaca, NY
+        summary: "Student Project Team at Cornell University competing in the SailBot International Robotic Sailing Regatta (IRSR)"
+        highlights:
+          - "Fabricated a five foot long hull using a fiberglass and resin composite layup."
+          - "Designed and built sail rigging using Solidworks and 3D printed PLA."
+      - company: "Camp Wigwam For Boys"
+        position: "Sailing and STEM Instructor"
+        start_date: "2025-06"
+        end_date: "2025-08"
+        location: "Waterford, ME"
+        highlights:
+          - "Led and mentored a bunk of campers while managing an activity area."
+          - "Educated kids in model rocketry and other STEM projects."
+          - "Assisted in the successful construction and launch of a
+            high-powered I-engine model rocket."
+    research_experience:
+      - company: Cornell University
+        position: ZT Group
+        start_date: "2026-03"
+        location: Ithaca, NY
+        summary: "Research group at Cornell University led by Professor Zhiting Tian, studying nanoscale thermal transport techniques."
+        highlights:
+          - "Investigated the use of nanoscale thermal switches with applications in semiconductor electronics and aerospace."
+      - company: "Stevens Institute of Technology"
+        position: "Parziale Group"
+        start_date: "2024-09"
+        end_date: "2025-06"
+        location: "Hoboken, NJ"
+        summary: "Research group at Stevens Institute of Technology studying hypersonic fluid flow at speeds above Mach 5."
+        highlights:
+          - "Interned under Professor Nicholaus Parziale’s research group,
+            conducting hypersonic fluid dynamics research."
+          - "Studied hypersonic boundary layers using Krypton Tagging
+            Velocimetry (KTV) in the Mach 6 Stevens Shock Tunnel."
+          - "Contributed to graduate-level fluid dynamics research for the US
+            Navy Office of Naval Research (ONR)."
+    skills_and_interests:
+      - label: "Programs"
+        details: "Python, Autodesk Fusion 360, Autodesk Inventor, MATLAB, ANSYS
+          Mechanical, Arduino"
+      - label: "Skills"
+        details: "Soldering, Digital Electronics, Numerical Simulation, 3D Design"
+      - label: "Interests"
+        details: "Hiking, Electronic Music, Climbing, Reading"
+design:
+  theme: engineeringresumes
+  page:
+    size: us-letter
+    top_margin: 2cm
+    bottom_margin: 2cm
+    left_margin: 2cm
+    right_margin: 2cm
+    show_page_numbering: false
+    show_last_updated_date: true
+  colors:
+    text: rgb(0, 0, 0)
+    name: rgb(0, 0, 0)
+    connections: rgb(0, 0, 0)
+    section_titles: rgb(0, 0, 0)
+    links: rgb(0, 0, 0)
+    last_updated_date_and_page_numbering: rgb(128, 128, 128)
+  text:
+    font_family: XCharter
+    font_size: 10pt
+    leading: 0.6em
+    alignment: justified
+    date_and_location_column_alignment: right
+  links:
+    underline: true
+    use_external_link_icon: false
+  header:
+    name_font_family: XCharter
+    name_font_size: 25pt
+    name_bold: false
+    small_caps_for_name: false
+    photo_width: 3.5cm
+    vertical_space_between_name_and_connections: 0.7cm
+    vertical_space_between_connections_and_first_section: 0.7cm
+    horizontal_space_between_connections: 0.5cm
+    connections_font_family: XCharter
+    separator_between_connections: '|'
+    use_icons_for_connections: false
+    use_urls_as_placeholders_for_connections: true
+    make_connections_links: true
+    alignment: center
+  section_titles:
+    type: with-full-line
+    font_family: XCharter
+    font_size: 1.2em
+    bold: true
+    small_caps: false
+    line_thickness: 0.5pt
+    vertical_space_above: 0.55cm
+    vertical_space_below: 0.3cm
+  entries:
+    date_and_location_width: 4.15cm
+    left_and_right_margin: 0cm
+    horizontal_space_between_columns: 0.1cm
+    vertical_space_between_entries: 0.4cm
+    allow_page_break_in_sections: true
+    allow_page_break_in_entries: true
+    short_second_row: false
+    show_time_spans_in: []
+  highlights:
+    bullet: •
+    nested_bullet: '-'
+    top_margin: 0.25cm
+    left_margin: 0cm
+    vertical_space_between_highlights: 0.19cm
+    horizontal_space_between_bullet_and_highlight: 0.3em
+    summary_left_margin: 0cm
+  entry_types:
+    one_line_entry:
+      template: '**LABEL:** DETAILS'
+    education_entry:
+      main_column_first_row_template: '**INSTITUTION**, DEGREE in AREA -- LOCATION'
+      degree_column_template:
+      degree_column_width: 1cm
+      main_column_second_row_template: |-
+        SUMMARY
+        HIGHLIGHTS
+      date_and_location_column_template: DATE
+    normal_entry:
+      main_column_first_row_template: '**NAME** -- **LOCATION**'
+      main_column_second_row_template: |-
+        SUMMARY
+        HIGHLIGHTS
+      date_and_location_column_template: DATE
+    experience_entry:
+      main_column_first_row_template: '**POSITION**, COMPANY -- LOCATION'
+      main_column_second_row_template: |-
+        SUMMARY
+        HIGHLIGHTS
+      date_and_location_column_template: DATE
+    publication_entry:
+      main_column_first_row_template: '**TITLE**'
+      main_column_second_row_template: |-
+        AUTHORS
+        URL (JOURNAL)
+      main_column_second_row_without_journal_template: |-
+        AUTHORS
+        URL
+      main_column_second_row_without_url_template: |-
+        AUTHORS
+        JOURNAL
+      date_and_location_column_template: DATE
+locale:
+  language: en
+  phone_number_format: national
+  page_numbering_template: NAME - Page PAGE_NUMBER of TOTAL_PAGES
+  last_updated_date_template: Last updated in TODAY
+  date_template: MONTH_ABBREVIATION YEAR
+  month: month
+  months: months
+  year: year
+  years: years
+  present: present
+  to: –
+  abbreviations_for_months:
+    - Jan
+    - Feb
+    - Mar
+    - Apr
+    - May
+    - June
+    - July
+    - Aug
+    - Sept
+    - Oct
+    - Nov
+    - Dec
+  full_names_of_months:
+    - January
+    - February
+    - March
+    - April
+    - May
+    - June
+    - July
+    - August
+    - September
+    - October
+    - November
+    - December
+rendercv_settings:
+  date: '2026-03-16'
+  bold_keywords: []
+  sort_entries: none
