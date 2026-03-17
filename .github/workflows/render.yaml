@@ -40,8 +40,7 @@ jobs:
       - name: Render CV
         run: |
           rendercv render "_data/Avram_Dreyer_Resume.yaml" \
-            --pdf-path "resume/resume.pdf" \
-            --typst-path "resume/resume.typ" \
+            --pdf-path "assets/pdf/Avram_Dreyer_CV.pdf" \
             --dont-generate-png
 
       - name: Commit rendered CV
