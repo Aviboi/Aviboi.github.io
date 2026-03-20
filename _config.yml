@@ -92,12 +92,8 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # -----------------------------------------------------------------------------
 
 collections:
-  books:
-    output: false
   projects:
     output: true
-  teachings:
-    output: false
 
 # -----------------------------------------------------------------------------
 # Jekyll settings
@@ -133,18 +129,10 @@ exclude:
   - lighthouse_results/
   - package.json
   - package-lock.json
-  - _pages/about_einstein.md
   - purgecss.config.js
   - README.md
   - readme_preview/
   - vendor
-  - _news/announcement_*.md
-  - _pages/blog.md
-  - _posts/
-  - assets/jupyter/blog.ipynb
-  - _pages/profiles.md
-  - _pages/books.md  # if you don't use the bookshelf
-  
 keep_files:
   - CNAME
   - .nojekyll
