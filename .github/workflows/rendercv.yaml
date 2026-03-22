@@ -43,7 +43,7 @@ jobs:
         run: |
           HTML_FILE=$(find . -name "*_CV.html" -path "*/output/*" | head -1)
           echo "Found HTML: $HTML_FILE"
-          python3 cv/process_cv.py "$HTML_FILE" cv.html
+          python3 cv/process_cv.py "$HTML_FILE" cv/index.html
       - name: Copy PDF to assets
         run: |
           mkdir -p assets/files
@@ -56,6 +56,6 @@ jobs:
           set -eux
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -f cv.html assets/files/cv.pdf cv/output/
+          git add -f cv/index.html assets/files/cv.pdf cv/output/
           git diff --staged --quiet || git commit -m "chore: rebuild CV"
           git push
