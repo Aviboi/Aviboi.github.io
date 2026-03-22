@@ -1,44 +1,30 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your entire site, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# `jekyll serve`. If you change this file, please restart the server process.
+title: "Your Name"
+description: "Writer, Journalist, Creator"
+baseurl: ""
+url: "https://yourusername.github.io"
 
+# Author info
+author:
+  name: "Your Name"
+  bio: "A brief tagline or description about yourself."
+  email: "hello@yoursite.com"
 
-# Site Settings
-locale                   : "en-US"
-title                    : Avram Dreyer
-title_separator          : "-"
-subtitle                 : # site tagline that appears below site title in masthead
-name                     : Avram Dreyer
-description              : Avram Dreyer - Projects and CV 
-baseurl                  : "avramdreyer.com" 
+# Navigation links (sidebar)
+nav_links:
+  - title: "About"
+    url: "/"
+  - title: "Writing"
+    url: "/writing/"
+  - title: "Projects"
+    url: "/projects/"
+  - title: "Contact"
+    url: "/contact/"
 
-# Theme and Style
-theme: jekyll-theme-minimal
-color_scheme: light # light/default, dark, or aqua
-
-sass:
-  style: compressed
-
-# Outputting
-permalink: /:categories/:title/
-
-collections:
-  pages:
-    output: true
-  projects:
-    output: true
-    permalink: /:collection/:path/
-
-# Markdown
+# Build settings
 markdown: kramdown
-kramdown:
-  input: GFM
-
-# Plugins (previously gems:)
-plugins:
-  - jekyll-feed
-  - jekyll-include-cache
-  - jekyll-seo-tag
+permalink: pretty
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - node_modules
