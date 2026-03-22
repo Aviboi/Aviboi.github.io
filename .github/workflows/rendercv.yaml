@@ -40,13 +40,16 @@ jobs:
           rendercv render cv/cv.yaml --output-folder cv/output
 
       - name: Process CV HTML for Jekyll
-        run: python3 cv/process_cv.py cv/output/*.html cv.html
-
+        run: |
+          HTML_FILE=$(find . -name "*_CV.html" -path "*/output/*" | head -1)
+          echo "Found HTML: $HTML_FILE"
+          python3 cv/process_cv.py "$HTML_FILE" cv.html
       - name: Copy PDF to assets
         run: |
-          set -eux
           mkdir -p assets/files
-          cp cv/output/*.pdf assets/files/cv.pdf
+          PDF_FILE=$(find . -name "*_CV.pdf" -path "*/output/*" | head -1)
+          echo "Found PDF: $PDF_FILE"
+          cp "$PDF_FILE" assets/files/cv.pdf
 
       - name: Commit generated files
         run: |
