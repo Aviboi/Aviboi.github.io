@@ -224,7 +224,4 @@ locale:
     - October
     - November
     - December
-rendercv_settings:
-  date: '2026-03-16'
-  bold_keywords: []
-  sort_entries: none
+
