@@ -1,20 +1,20 @@
-title: "Your Name"
-description: "Writer, Journalist, Creator"
+title: "Avram Dreyer"
+description: "Cornell University"
 baseurl: ""
-url: "https://yourusername.github.io"
+url: "https://avramdreyer.com"
 
 # Author info
 author:
-  name: "Your Name"
-  bio: "A brief tagline or description about yourself."
-  email: "hello@yoursite.com"
+  name: "Avram Dreyer"
+  bio: "Mechanical engineering student at Cornell University interested in aerospace, mechanical design, and fluid dynamics."
+  email: "ajd335@cornell.edu"
 
 # Navigation links (sidebar)
 nav_links:
   - title: "About"
     url: "/"
-  - title: "Writing"
-    url: "/writing/"
+  - title: "CV"
+    url: "/cv/"
   - title: "Projects"
     url: "/projects/"
   - title: "Contact"
