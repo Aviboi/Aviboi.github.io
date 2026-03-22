@@ -8,6 +8,8 @@
   --color-accent:     #1a1a1a;
   --color-border:     #e2ddd8;
   --color-hover:      #555;
+  --color-link:       #2a5db0;
+  --color-link-hover: #1a3f80;
 
   --font-serif:       'EB Garamond', Georgia, serif;
   --font-mono:        'Overpass Mono', 'Courier New', monospace;
@@ -172,6 +174,15 @@ ul {
 
 .main-content > * {
   max-width: var(--content-max);
+}
+
+.main-content a {
+  color: var(--color-link);
+  transition: color var(--transition), text-decoration-color var(--transition);
+}
+
+.main-content a:hover {
+  color: var(--color-link-hover);
 }
 
 /* ============================================================
