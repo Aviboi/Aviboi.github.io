@@ -210,37 +210,8 @@ design:
 
 locale:
   language: english
-  phone_number_format: national
-  date_template: MONTH_ABBREVIATION YEAR
   month: month
   months: months
   year: year
   years: years
   present: present
-  to: "–"
-  abbreviations_for_months:
-    - Jan
-    - Feb
-    - Mar
-    - Apr
-    - May
-    - June
-    - July
-    - Aug
-    - Sept
-    - Oct
-    - Nov
-    - Dec
-  full_names_of_months:
-    - January
-    - February
-    - March
-    - April
-    - May
-    - June
-    - July
-    - August
-    - September
-    - October
-    - November
-    - December
