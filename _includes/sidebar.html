@@ -23,7 +23,13 @@
 
     <div class="sidebar-footer">
       {% if site.author.email %}
-        <a href="mailto:{{ site.author.email }}" class="contact-link">Contact</a>
+        <a href="mailto:{{ site.author.email }}" class="contact-link"><i class="fa-solid fa-envelope"></i></a>
+      {% endif %}
+      {% if site.author.linkedin %}
+        <a href="{{ site.author.linkedin }}" class="contact-link" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
+      {% endif %}
+      {% if site.author.github %}
+        <a href="{{ site.author.github }}" class="contact-link" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
       {% endif %}
     </div>
 
