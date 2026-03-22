@@ -209,7 +209,7 @@ design:
       date_and_location_column: DATE
 
 locale:
-  language: en
+  language: english
   phone_number_format: national
   date_template: MONTH_ABBREVIATION YEAR
   month: month
