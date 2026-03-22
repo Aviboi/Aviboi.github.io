@@ -27,8 +27,8 @@ Gemfile.lock
 *.swo
 *~
 
-# GitHub Actions
-.github/workflows/*
-
 # VS Code specific settings
 .vscode/
+
+# Allow cv.html to be tracked
+!cv.html

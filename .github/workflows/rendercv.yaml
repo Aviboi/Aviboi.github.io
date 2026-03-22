@@ -1,0 +1,44 @@
+name: Build CV
+
+on:
+  push:
+    paths:
+      - 'cv/cv.yaml'        # only runs when you edit the CV
+  workflow_dispatch:         # also lets you trigger it manually
+
+jobs:
+  build-cv:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write        # needed to commit the output back
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install RenderCV
+        run: pip install rendercv
+
+      - name: Build CV
+        run: rendercv render cv/cv.yaml --output-folder cv/output
+
+      - name: Process CV HTML for Jekyll
+        run: python3 cv/process_cv.py cv/output/*.html cv.html
+
+      - name: Copy PDF to assets
+        run: |
+          mkdir -p assets/files
+          cp cv/output/*.pdf assets/files/cv.pdf
+
+      - name: Commit generated files
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add cv.html assets/files/cv.pdf cv/output/
+          git diff --staged --quiet || git commit -m "chore: rebuild CV"
+          git push
