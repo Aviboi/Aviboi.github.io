@@ -1,0 +1,14 @@
+services:
+  jekyll:
+    build: .
+    ports:
+      - "4000:4000"
+      - "35729:35729"   # livereload port
+    volumes:
+      - .:/site
+      - bundle_cache:/usr/local/bundle   # cache gems between runs
+    environment:
+      - JEKYLL_ENV=development
+
+volumes:
+  bundle_cache:
