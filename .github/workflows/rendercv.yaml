@@ -37,7 +37,7 @@ jobs:
       - name: Build CV
         run: |
           set -eux
-          LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8 rendercv render cv/cv.yaml --output-folder cv/output
+          rendercv render cv/cv.yaml --output-folder cv/output
 
       - name: Process CV HTML for Jekyll
         run: python3 cv/process_cv.py cv/output/*.html cv.html
