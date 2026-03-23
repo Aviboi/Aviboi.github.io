@@ -36,8 +36,8 @@ def process(input_path: Path, output_path: Path) -> None:
     # 4. Build download link
     download_link = (
         '<div class="cv-download-bar">\n'
-        '  <a href="/assets/files/cv.pdf" class="cv-download-link" download>'
-        "↓ Download PDF"
+        '  <a href="/assets/files/cv.pdf" class="cv-download-link" target="_blank" rel="noopener noreferrer">'
+        "↑ Open PDF"
         "</a>\n"
         "</div>\n"
     )
