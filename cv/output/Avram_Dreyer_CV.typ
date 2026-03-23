@@ -15,7 +15,7 @@
   page-left-margin: 2cm,
   page-right-margin: 2cm,
   page-show-footer: false,
-  page-show-top-note: true,
+  page-show-top-note: false,
   colors-body: rgb(0, 0, 0),
   colors-name: rgb(0, 0, 0),
   colors-headline: rgb(0, 0, 0),
@@ -41,7 +41,7 @@
   typography-small-caps-headline: false,
   typography-small-caps-connections: false,
   typography-small-caps-section-titles: false,
-  typography-bold-name: false,
+  typography-bold-name: true,
   typography-bold-headline: false,
   typography-bold-connections: false,
   typography-bold-section-titles: true,
@@ -81,7 +81,7 @@
   date: datetime(
     year: 2026,
     month: 3,
-    day: 22,
+    day: 23,
   ),
 )
 
@@ -103,7 +103,7 @@
 
   ],
   [
-    Aug 2025 – May 2029
+    #strong[Aug 2025 – May 2029]
 
   ],
   main-column-second-row: [
@@ -116,11 +116,11 @@
 
 #education-entry(
   [
-    #strong[Bergen County Technical High School], Diploma in Aerospace Engineering -- Teterboro, NJ
+    #strong[Bergen County Technical High School], Diploma in Engineering -- Teterboro, NJ
 
   ],
   [
-    Sept 2020 – June 2025
+    #strong[Sept 2020 – June 2025]
 
   ],
   main-column-second-row: [
@@ -137,13 +137,13 @@
 
   ],
   [
-    Sept 2024 – Apr 2025
+    #strong[Sept 2024 – Apr 2025]
 
   ],
   main-column-second-row: [
     - Collaborated to design and build a novel thermal management system for a 1U CubeSat satellite.
 
-    - Designed in Fusion360 and thermal analysis with ANSYS Mechanical. Fabricated using custom brass plates and pipes.
+    - Designed in Fusion360 and thermal analysis with ANSYS Mechanical. Fabricated out of custom copper.
 
     - Selected as one of five finalist teams in the nation for the NASA HUNCH space hardware design competition.
 
@@ -156,11 +156,11 @@
 
 #regular-entry(
   [
-    #strong[Mechanical Subteam Member], Cornell Autonomous Sailboat Team -- Ithaca, NY
+    #strong[Mechanical Subteam Member], #strong[Cornell Autonomous Sailboat Team] -- Ithaca, NY
 
   ],
   [
-    Feb 2026 – present
+    #strong[Feb 2026 – present]
 
   ],
   main-column-second-row: [
@@ -175,11 +175,11 @@
 
 #regular-entry(
   [
-    #strong[Sailing and STEM Instructor], Camp Wigwam For Boys -- Waterford, ME
+    #strong[Sailing and STEM Instructor], #strong[Camp Wigwam For Boys] -- Waterford, ME
 
   ],
   [
-    June 2025 – Aug 2025
+    #strong[June 2025 – Aug 2025]
 
   ],
   main-column-second-row: [
@@ -196,15 +196,17 @@
 
 #regular-entry(
   [
-    #strong[ZT Group], Cornell University -- Ithaca, NY
+    #strong[ZT Group], #strong[Cornell University] -- Ithaca, NY
 
   ],
   [
-    Mar 2026 – present
+    #strong[Mar 2026 – present]
 
   ],
   main-column-second-row: [
-    #summary[Research group at Cornell University led by Professor Zhiting Tian, studying nanoscale thermal transport techniques.]
+    #summary[Undergraduate Researcher]
+
+    - Research group at Cornell University led by Professor Zhiting Tian, studying nanoscale thermal transport techniques.
 
     - Investigated the use of nanoscale thermal switches with applications in semiconductor electronics and aerospace.
 
@@ -213,19 +215,21 @@
 
 #regular-entry(
   [
-    #strong[Parziale Group], Stevens Institute of Technology -- Hoboken, NJ
+    #strong[Parziale Group], #strong[Stevens Institute of Technology] -- Hoboken, NJ
 
   ],
   [
-    Sept 2024 – June 2025
+    #strong[Sept 2024 – June 2025]
 
   ],
   main-column-second-row: [
-    #summary[Research group at Stevens Institute of Technology studying hypersonic fluid flow at speeds above Mach 5.]
+    #summary[Research Intern]
+
+    - Research group at Stevens Institute of Technology studying hypersonic fluid flow at speeds above Mach 5.
 
     - Interned under Professor Nicholaus Parziale's research group, conducting hypersonic fluid dynamics research.
 
-    - Studied hypersonic boundary layers using Krypton Tagging Velocimetry (KTV) in the Mach 6 Stevens Shock Tunnel.
+    - Studied hypersonic boundary layers using Krypton Tagging Velocimetry (KTV) in the Stevens Shock Tunnel.
 
     - Contributed to graduate-level fluid dynamics research for the US Navy Office of Naval Research (ONR).
 
@@ -234,7 +238,7 @@
 
 == Skills and Interests
 
-#strong[Programs:] Python, Autodesk Fusion 360, Autodesk Inventor, MATLAB, ANSYS Mechanical, Arduino
+#strong[Technologies:] Python, Autodesk Fusion 360, Autodesk Inventor, MATLAB, ANSYS Mechanical, Arduino
 
 #strong[Skills:] Soldering, Digital Electronics, Numerical Simulation, 3D Design
 
