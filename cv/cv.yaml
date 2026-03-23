@@ -18,7 +18,7 @@ cv:
           - "***Relevant Coursework:*** Statics, Differential Equations, Intro to
             Computing, Intro to Lasers and Photonics"
       - institution: "Bergen County Technical High School"
-        area: "Aerospace Engineering"
+        area: "Engineering"
         degree: "Diploma"
         start_date: "2020-09"
         end_date: "2025-06"
@@ -36,14 +36,14 @@ cv:
           - "Collaborated to design and build a novel thermal management system for
             a 1U CubeSat satellite."
           - "Designed in Fusion360 and thermal analysis with ANSYS Mechanical.
-            Fabricated using custom brass plates and pipes."
+            Fabricated out of custom copper."
           - "Selected as one of five finalist teams in the nation for the NASA
             HUNCH space hardware design competition."
           - "Presented at Johnson Space Center to NASA engineers for potential
             implementation in flight hardware."
 
     technical_experience:
-      - company: "Cornell Autonomous Sailboat Team"
+      - company: "**Cornell Autonomous Sailboat Team**"
         position: "Mechanical Subteam Member"
         start_date: "2026-02"
         location: "Ithaca, NY"
@@ -53,7 +53,7 @@ cv:
           - "Fabricated a five foot long hull using a fiberglass and resin
             composite layup."
           - "Designed and built sail rigging using Solidworks and 3D printed PLA."
-      - company: "Camp Wigwam For Boys"
+      - company: "**Camp Wigwam For Boys**"
         position: "Sailing and STEM Instructor"
         start_date: "2025-06"
         end_date: "2025-08"
@@ -65,32 +65,32 @@ cv:
             I-engine model rocket."
 
     research_experience:
-      - company: "Cornell University"
+      - company: "**Cornell University**"
         position: "ZT Group"
         start_date: "2026-03"
         location: "Ithaca, NY"
-        summary: "Research group at Cornell University led by Professor Zhiting
-          Tian, studying nanoscale thermal transport techniques."
+        summary: "Undergraduate Researcher"
         highlights:
+          - "Research group at Cornell University led by Professor Zhiting Tian, studying nanoscale thermal transport techniques."
           - "Investigated the use of nanoscale thermal switches with applications
             in semiconductor electronics and aerospace."
-      - company: "Stevens Institute of Technology"
+      - company: "**Stevens Institute of Technology**"
         position: "Parziale Group"
         start_date: "2024-09"
         end_date: "2025-06"
         location: "Hoboken, NJ"
-        summary: "Research group at Stevens Institute of Technology studying
-          hypersonic fluid flow at speeds above Mach 5."
+        summary: "Research Intern"
         highlights:
+          - "Research group at Stevens Institute of Technology studying hypersonic fluid flow at speeds above Mach 5."
           - "Interned under Professor Nicholaus Parziale's research group,
             conducting hypersonic fluid dynamics research."
           - "Studied hypersonic boundary layers using Krypton Tagging Velocimetry
-            (KTV) in the Mach 6 Stevens Shock Tunnel."
+            (KTV) in the Stevens Shock Tunnel."
           - "Contributed to graduate-level fluid dynamics research for the US Navy
             Office of Naval Research (ONR)."
 
     skills_and_interests:
-      - label: "Programs"
+      - label: "Technologies"
         details: "Python, Autodesk Fusion 360, Autodesk Inventor, MATLAB, ANSYS
           Mechanical, Arduino"
       - label: "Skills"
@@ -108,6 +108,7 @@ design:
     left_margin: 2cm
     right_margin: 2cm
     show_footer: false
+    show_top_note: false
 
   colors:
     body: rgb(0, 0, 0)
@@ -128,7 +129,7 @@ design:
       name: 25pt
       section_titles: 1.2em
     bold:
-      name: false
+      name: true
       section_titles: true
     small_caps:
       name: false
@@ -188,25 +189,25 @@ design:
         SUMMARY
         HIGHLIGHTS
       degree_column:
-      date_and_location_column: DATE
+      date_and_location_column: "**DATE**"
     normal_entry:
       main_column: |-
         **NAME** -- **LOCATION**
         SUMMARY
         HIGHLIGHTS
-      date_and_location_column: DATE
+      date_and_location_column: "**DATE**"
     experience_entry:
       main_column: |-
         **POSITION**, COMPANY -- LOCATION
         SUMMARY
         HIGHLIGHTS
-      date_and_location_column: DATE
+      date_and_location_column: "**DATE**"
     publication_entry:
       main_column: |-
         **TITLE**
         AUTHORS
         URL (JOURNAL)
-      date_and_location_column: DATE
+      date_and_location_column: "**DATE**"
 
 locale:
   language: english

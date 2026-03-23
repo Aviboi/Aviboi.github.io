@@ -162,6 +162,25 @@ ul {
   display: none;
 }
 
+.cv-download-bar {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.cv-download-link {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  transition: color var(--transition);
+}
+
+.cv-download-link:hover {
+  color: var(--color-text);
+}
+
 /* ============================================================
    MAIN CONTENT AREA
    ============================================================ */

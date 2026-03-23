@@ -20,7 +20,17 @@ def process(input_path: Path, output_path: Path) -> None:
     body_match = re.search(r"<body[^>]*>([\s\S]*?)</body>", html, re.IGNORECASE)
     body = body_match.group(1).strip() if body_match else html
 
-    # 3. Wrap in Jekyll front matter
+    # 3. Replace the h1 heading
+    body = re.sub(r"<h1[^>]*>.*?</h1>", "<h1>CV</h1>", body, flags=re.IGNORECASE | re.DOTALL)
+
+    # 3. Build download link
+    download_link = '''<div class="cv-download-bar">
+  <a href="/assets/files/cv.pdf" class="cv-download-link">
+    ↓ Open PDF Version
+  </a>
+</div>'''
+
+    # 4. Wrap in Jekyll front matter
     jekyll_page = f"""---
 layout: default
 title: CV
