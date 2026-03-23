@@ -1,6 +1,7 @@
 ---
 layout: default
 title: ENGRD 2020 Nutcracker Design
+math: true
 ---
 
 # ENGRD 2020 Nutcracker Design Project
