@@ -1,9 +1,4 @@
 #!/usr/bin/env python3
-"""
-Strip RenderCV's embedded styles from the HTML output and
-wrap the content in a Jekyll front-matter shell so it
-renders inside your site layout.
-"""
 
 import re
 import sys
@@ -13,21 +8,35 @@ from pathlib import Path
 def process(input_path: Path, output_path: Path) -> None:
     html = input_path.read_text(encoding="utf-8")
 
-    # 1. Remove <style> blocks (RenderCV's embedded CSS)
+    # 1. Remove <style> blocks
     html = re.sub(r"<style[\s\S]*?</style>", "", html, flags=re.IGNORECASE)
 
-    # 2. Extract just the <body> content
+    # 2. Extract <body> content
     body_match = re.search(r"<body[^>]*>([\s\S]*?)</body>", html, re.IGNORECASE)
     body = body_match.group(1).strip() if body_match else html
 
-    # 3. Build download link
-    download_link = '''<div class="cv-download-bar">
-  <a href="/assets/files/cv.pdf" class="cv-download-link">
-    ↓ Open PDF Version
-  </a>
-</div>'''
+    # 3. Replace only the first <h1> with "CV"
+    body = re.sub(
+        r"<h1[^>]*>.*?</h1>",
+        "<h1>CV</h1>",
+        body,
+        count=1,
+        flags=re.IGNORECASE | re.DOTALL,
+    )
 
-    # 4. Wrap in Jekyll front matter
+    # 4. Build download link
+    download_link = (
+        '<div class="cv-download-bar">\n'
+        '  <a href="/assets/files/cv.pdf" class="cv-download-link" download>'
+        "↓ Download PDF"
+        "</a>\n"
+        "</div>\n"
+    )
+
+    # 5. Insert download link immediately after the opening <h1>CV</h1>
+    body = body.replace("</h1>", "</h1>\n" + download_link, 1)
+
+    # 6. Wrap in Jekyll front matter
     jekyll_page = f"""---
 layout: default
 title: CV
