@@ -26,7 +26,7 @@ def process(input_path: Path, output_path: Path) -> None:
 
     # 4. Remove contact info block between <h1> and Education section
     body = re.sub(
-        r"(</h1>).*?(<h2[^>]*>\s*Education\s*</h2>)",
+        r"(</h1>).*?(<h1[^>]*>\s*Education\s*</h1>)",
         r"\1\n\2",
         body,
         count=1,
