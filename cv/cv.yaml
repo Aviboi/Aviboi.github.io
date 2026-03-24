@@ -32,11 +32,11 @@ cv:
         start_date: "2024-09"
         end_date: "2025-04"
         location: "Houston, TX"
+#        summary: "NASA HUNCH Design & Prototype Competition"
         highlights:
           - "Collaborated to design and build a novel thermal management system for
             a 1U CubeSat satellite."
-          - "Designed in Fusion360 and thermal analysis with ANSYS Mechanical.
-            Fabricated out of custom copper."
+          - "Designed in Fusion360 and performed a thermal analysis with ANSYS Mechanical."
           - "Selected as one of five finalist teams in the nation for the NASA
             HUNCH space hardware design competition."
           - "Presented at Johnson Space Center to NASA engineers for potential
@@ -47,63 +47,56 @@ cv:
         position: "Mechanical Subteam Member"
         start_date: "2026-02"
         location: "Ithaca, NY"
-        summary: "Student Project Team at Cornell University competing in the
-          SailBot International Robotic Sailing Regatta (IRSR)"
+#        summary: "Student Project Team at Cornell University"
         highlights:
-          - "Fabricated a five foot long hull using a fiberglass and resin
-            composite layup."
-          - "Designed and built sail rigging using Solidworks and 3D printed PLA."
+          - "Member of a 48-student Project Team designing and building an
+            autonomous sailboat for the IRSR competition."
+          - "Focused on the design and fabrication of the boat's custom reinforced mylar sails and rigging system."
+          - "Used Solidworks and composite materials to design a prototype solid sail for use on a future trans-Atlantic boat."
       - company: "**Camp Wigwam For Boys**"
-        position: "Sailing and STEM Instructor"
+        position: "Sailing Instructor and STEM Educator"
         start_date: "2025-06"
         end_date: "2025-08"
         location: "Waterford, ME"
         highlights:
-          - "Led and mentored a bunk of campers while managing an activity area."
-          - "Educated kids in model rocketry and other STEM projects."
-          - "Assisted in the successful construction and launch of a high-powered
-            I-engine model rocket."
+          - "Taught sailing and other water sports to campers ages 8-16 at a summer camp in Maine."
+          - "Ran a model rocketry workshop, teaching campers to design, build, and launch their own custom model rockets."
+          - "Contributed to the successful construction and launch of a high-powered I-motor rocket at the end of the summer."
 
     research_experience:
-      - company: "**Cornell University**"
-        position: "ZT Group"
+      - company: "**ZT Group, Cornell University**"
+        position: "Undergraduate Researcher"
         start_date: "2026-03"
         location: "Ithaca, NY"
-        summary: "Undergraduate Researcher"
         highlights:
-          - "Research group at Cornell University led by Professor Zhiting Tian, studying nanoscale thermal transport techniques."
-          - "Investigated the use of nanoscale thermal switches with applications
-            in semiconductor electronics and aerospace."
-      - company: "**Stevens Institute of Technology**"
-        position: "Parziale Group"
+          - "Research group studying nanoscale thermal transport techniques to improve heat management in microelectronics."
+          - "Studied the use of microscopic liquid crystal thermal switches to provide integrated on-chip thermal control."
+      - company: "**Parziale Group, Stevens Institute of Technology**"
+        position: "Research Intern"
         start_date: "2024-09"
         end_date: "2025-06"
         location: "Hoboken, NJ"
-        summary: "Research Intern"
         highlights:
-          - "Research group at Stevens Institute of Technology studying hypersonic fluid flow at speeds above Mach 5."
-          - "Interned under Professor Nicholaus Parziale's research group,
-            conducting hypersonic fluid dynamics research."
-          - "Studied hypersonic boundary layers using Krypton Tagging Velocimetry
-            (KTV) in the Stevens Shock Tunnel."
+          - "Research group studying hypersonic fluid flow and turbulence at airspeeds above five times the speed of sound."
+          - "Used a custom Mach 6 wind tunnel to study turbulence and heating behavior of aircraft at extremely high speeds."
           - "Contributed to graduate-level fluid dynamics research for the US Navy
             Office of Naval Research (ONR)."
 
-    skills_and_interests:
-      - label: "Technologies"
-        details: "Python, Autodesk Fusion 360, Autodesk Inventor, MATLAB, ANSYS
-          Mechanical, Arduino"
+    skills_and_technologies:
       - label: "Skills"
-        details: "Soldering, Digital Electronics, Numerical Simulation, 3D Design"
-      - label: "Interests"
-        details: "Hiking, Electronic Music, Climbing, Reading"
+        details: "Soldering, Digital Electronics, Numerical Simulation, 3D Design, Rapid Prototyping, Data Analysis"
+      - label: "Technologies"
+        details: "Python, Solidworks, Autodesk Fusion 360, Autodesk Inventor, MATLAB, ANSYS
+          Mechanical, Arduino"
+#      - label: "Interests"
+#        details: "Hiking, Electronic Music, Climbing, Reading"
 
 design:
   theme: engineeringresumes
 
   page:
     size: us-letter
-    top_margin: 2cm
+    top_margin: 1.25cm
     bottom_margin: 2cm
     left_margin: 2cm
     right_margin: 2cm
