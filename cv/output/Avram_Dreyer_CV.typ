@@ -10,7 +10,7 @@
   locale-catalog-language: "en",
   text-direction: ltr,
   page-size: "us-letter",
-  page-top-margin: 2cm,
+  page-top-margin: 1.25cm,
   page-bottom-margin: 2cm,
   page-left-margin: 2cm,
   page-right-margin: 2cm,
@@ -143,7 +143,7 @@
   main-column-second-row: [
     - Collaborated to design and build a novel thermal management system for a 1U CubeSat satellite.
 
-    - Designed in Fusion360 and thermal analysis with ANSYS Mechanical. Fabricated out of custom copper.
+    - Designed in Fusion360 and performed a thermal analysis with ANSYS Mechanical.
 
     - Selected as one of five finalist teams in the nation for the NASA HUNCH space hardware design competition.
 
@@ -164,18 +164,18 @@
 
   ],
   main-column-second-row: [
-    #summary[Student Project Team at Cornell University competing in the SailBot International Robotic Sailing Regatta (IRSR)]
+    - Member of a 48-student Project Team designing and building an autonomous sailboat for the IRSR competition.
 
-    - Fabricated a five foot long hull using a fiberglass and resin composite layup.
+    - Focused on the design and fabrication of the boat's custom reinforced mylar sails and rigging system.
 
-    - Designed and built sail rigging using Solidworks and 3D printed PLA.
+    - Used Solidworks and composite materials to design a prototype solid sail for use on a future trans-Atlantic boat.
 
   ],
 )
 
 #regular-entry(
   [
-    #strong[Sailing and STEM Instructor], #strong[Camp Wigwam For Boys] -- Waterford, ME
+    #strong[Sailing Instructor and STEM Educator], #strong[Camp Wigwam For Boys] -- Waterford, ME
 
   ],
   [
@@ -183,11 +183,11 @@
 
   ],
   main-column-second-row: [
-    - Led and mentored a bunk of campers while managing an activity area.
+    - Taught sailing and other water sports to campers ages 8-16 at a summer camp in Maine.
 
-    - Educated kids in model rocketry and other STEM projects.
+    - Ran a model rocketry workshop, teaching campers to design, build, and launch their own custom model rockets.
 
-    - Assisted in the successful construction and launch of a high-powered I-engine model rocket.
+    - Contributed to the successful construction and launch of a high-powered I-motor rocket at the end of the summer.
 
   ],
 )
@@ -196,7 +196,7 @@
 
 #regular-entry(
   [
-    #strong[ZT Group], #strong[Cornell University] -- Ithaca, NY
+    #strong[Undergraduate Researcher], #strong[ZT Group, Cornell University] -- Ithaca, NY
 
   ],
   [
@@ -204,18 +204,16 @@
 
   ],
   main-column-second-row: [
-    #summary[Undergraduate Researcher]
+    - Research group studying nanoscale thermal transport techniques to improve heat management in microelectronics.
 
-    - Research group at Cornell University led by Professor Zhiting Tian, studying nanoscale thermal transport techniques.
-
-    - Investigated the use of nanoscale thermal switches with applications in semiconductor electronics and aerospace.
+    - Studied the use of microscopic liquid crystal thermal switches to provide integrated on-chip thermal control.
 
   ],
 )
 
 #regular-entry(
   [
-    #strong[Parziale Group], #strong[Stevens Institute of Technology] -- Hoboken, NJ
+    #strong[Research Intern], #strong[Parziale Group, Stevens Institute of Technology] -- Hoboken, NJ
 
   ],
   [
@@ -223,23 +221,17 @@
 
   ],
   main-column-second-row: [
-    #summary[Research Intern]
+    - Research group studying hypersonic fluid flow and turbulence at airspeeds above five times the speed of sound.
 
-    - Research group at Stevens Institute of Technology studying hypersonic fluid flow at speeds above Mach 5.
-
-    - Interned under Professor Nicholaus Parziale's research group, conducting hypersonic fluid dynamics research.
-
-    - Studied hypersonic boundary layers using Krypton Tagging Velocimetry (KTV) in the Stevens Shock Tunnel.
+    - Used a custom Mach 6 wind tunnel to study turbulence and heating behavior of aircraft at extremely high speeds.
 
     - Contributed to graduate-level fluid dynamics research for the US Navy Office of Naval Research (ONR).
 
   ],
 )
 
-== Skills and Interests
+== Skills and Technologies
 
-#strong[Technologies:] Python, Autodesk Fusion 360, Autodesk Inventor, MATLAB, ANSYS Mechanical, Arduino
+#strong[Skills:] Soldering, Digital Electronics, Numerical Simulation, 3D Design, Rapid Prototyping, Data Analysis
 
-#strong[Skills:] Soldering, Digital Electronics, Numerical Simulation, 3D Design
-
-#strong[Interests:] Hiking, Electronic Music, Climbing, Reading
+#strong[Technologies:] Python, Solidworks, Autodesk Fusion 360, Autodesk Inventor, MATLAB, ANSYS Mechanical, Arduino
