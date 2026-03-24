@@ -5,6 +5,7 @@ date: 2026-02
 description: A design exercise for my introductory statics course at Cornell.
 permalink: /projects/nutcracker/
 math: true
+visible: true
 ---
 
 # ENGRD 2020 Nutcracker Design Project

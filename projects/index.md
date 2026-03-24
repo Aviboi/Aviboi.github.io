@@ -11,6 +11,7 @@ permalink: /projects/
   | reverse %}
 
 {% for project in projects %}
+{% if project.visible %}
 <div class="project-item">
   <a href="{{ project.url | relative_url }}" class="project-title">
     {{ project.title }}
@@ -22,4 +23,5 @@ permalink: /projects/
     <p class="project-description">{{ project.description }}</p>
   {% endif %}
 </div>
+{% endif %}
 {% endfor %}
