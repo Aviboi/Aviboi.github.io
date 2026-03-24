@@ -33,7 +33,15 @@ def process(input_path: Path, output_path: Path) -> None:
         flags=re.IGNORECASE | re.DOTALL,
     )
 
-    # 4. Build download link
+    # 5. Add <div> wrapper around <h1> and <h2> sections for styling
+    body = re.sub(
+        r"(<h[12][^>]*>.*?</h[12]>)",
+        r'<div class="cv-section">\n\1\n</div>',
+        body,
+        flags=re.IGNORECASE | re.DOTALL,
+    )
+
+    # 6. Build download link
     download_link = (
         '<div class="cv-download-bar">\n'
         '  <a href="/assets/files/cv.pdf" class="cv-download-link" target="_blank" rel="noopener noreferrer">'
@@ -42,10 +50,10 @@ def process(input_path: Path, output_path: Path) -> None:
         "</div>\n"
     )
 
-    # 5. Insert download link immediately after the opening <h1>CV</h1>
+    # 7. Insert download link immediately after the opening <h1>CV</h1>
     body = body.replace("</h1>", "</h1>\n" + download_link, 1)
 
-    # 6. Wrap in Jekyll front matter
+    # 8. Wrap in Jekyll front matter
     jekyll_page = f"""---
 layout: default
 title: CV
