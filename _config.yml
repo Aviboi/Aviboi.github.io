@@ -30,3 +30,6 @@ exclude:
   - Gemfile.lock
   - README.md
   - node_modules
+
+plugins:
+  - jekyll-sitemap
