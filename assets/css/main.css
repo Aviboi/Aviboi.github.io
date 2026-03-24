@@ -162,8 +162,7 @@ ul {
   display: none;
 }
 
-.cv-download-bar {
-  margin-bottom: 1.5rem;
+.cv-download-bar {  
   padding-bottom: 1rem;
   border-bottom: 1px solid var(--color-border);
 }
@@ -463,7 +462,31 @@ blockquote {
 /* ============================================================
    CV PAGE
    ============================================================ */
+
 .cv-section {
   border-bottom: 1px solid var(--color-border);
   padding-bottom: 1.5rem;
+  padding-left: 3rem;
+}
+
+.cv-header {
+  border-bottom: 3px solid var(--color-border);
+  border-top: 2px solid var(--color-border);
+  padding-bottom: 0.75rem;
+  padding-top: 2rem;
+}
+
+/* ============================================================
+   CONTACT PAGE
+   ============================================================ */
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  border-top: 3px solid var(--color-border);
+  padding-top: 1rem;
+  border-bottom: 3px solid var(--color-border);
+  padding-bottom: 1rem;
+  font-size: 20px;
 }

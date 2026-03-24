@@ -4,6 +4,8 @@ title: Projects
 permalink: /projects/
 ---
 
+# Projects
+
 {% assign projects = site.pages 
   | where_exp: "p", "p.path contains 'projects/'" 
   | where_exp: "p", "p.path != 'projects/index.md'"
