@@ -51,7 +51,17 @@ jobs:
           echo "Found PDF: $PDF_FILE"
           cp "$PDF_FILE" assets/files/cv.pdf
 
-      - name: Commit generated files
+      - name: Commit generated files locally (act)
+        if: ${{ env.ACT == 'true' }}
+        run: |
+          set -eux
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -f cv/index.html assets/files/cv.pdf cv/output/
+          git diff --staged --quiet || git commit -m "chore: rebuild CV"
+
+      - name: Commit generated files and push (GitHub Actions)
+        if: ${{ env.ACT != 'true' }}
         run: |
           set -eux
           git config user.name  "github-actions[bot]"

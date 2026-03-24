@@ -33,13 +33,23 @@ def process(input_path: Path, output_path: Path) -> None:
         flags=re.IGNORECASE | re.DOTALL,
     )
 
-    # 5. Add <div> wrapper around <h1> and <h2> sections for styling
-    body = re.sub(
-        r"(<h[12][^>]*>.*?</h[12]>)",
-        r'<div class="cv-section">\n\1\n</div>',
-        body,
-        flags=re.IGNORECASE | re.DOTALL,
-    )
+    # 5. Wrap each heading and following content until the next heading in a section div
+    heading_pattern = re.compile(r"(<h[12][^>]*>.*?</h[12]>)", re.IGNORECASE | re.DOTALL)
+    heading_count = 0
+
+    def wrap_section_boundaries(match: re.Match[str]) -> str:
+        nonlocal heading_count
+        heading_html = match.group(1)
+        if heading_count == 0:
+            heading_count += 1
+            return f'<div class="cv-section">\n{heading_html}'
+
+        heading_count += 1
+        return f'\n</div><div class="cv-section">\n{heading_html}'
+
+    body = heading_pattern.sub(wrap_section_boundaries, body)
+    if heading_count:
+        body += "\n</div>"
 
     # 6. Build download link
     download_link = (
