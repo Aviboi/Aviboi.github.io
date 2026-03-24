@@ -1,9 +1,25 @@
 ---
-layout: default
+layout: page
 title: Projects
+permalink: /projects/
 ---
 
-# Projects
+{% assign projects = site.pages 
+  | where_exp: "p", "p.path contains 'projects/'" 
+  | where_exp: "p", "p.path != 'projects/index.md'"
+  | sort: "date" 
+  | reverse %}
 
-2026:<br>
-[ENGRD 2020 Nutcracker Design](/projects/ENGRD_2020_Nutcracker_Design)
+{% for project in projects %}
+<div class="project-item">
+  <a href="{{ project.url | relative_url }}" class="project-title">
+    {{ project.title }}
+  </a>
+  {% if project.date %}
+    <span class="project-date">{{ project.date }}</span>
+  {% endif %}
+  {% if project.description %}
+    <p class="project-description">{{ project.description }}</p>
+  {% endif %}
+</div>
+{% endfor %}
