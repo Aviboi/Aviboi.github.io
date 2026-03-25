@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "Contact"
+description: "Contact links for Avram Dreyer, mechanical engineering student at Cornell University"
 permalink: /contact/
 ---
 

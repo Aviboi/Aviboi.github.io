@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "About"
+description: Personal website of Avram Dreyer
 permalink: /
 ---
 
