@@ -31,8 +31,10 @@ bundle exec jekyll build
 
 ### Image Optimization
 
-Before adding new images, optimize them to reduce file sizes:
+**Automated (recommended):**
+Images are automatically optimized when pushed to main via GitHub Actions.
 
+**Manual optimization:**
 ```bash
 # Requires: pip install Pillow
 python scripts/optimize-images.py
@@ -68,6 +70,23 @@ python3 cv/process_cv.py $(find . -name "*_CV.html" -path "*/output/*" | head -1
 ```
 
 ## High-Level Architecture
+
+### GitHub Actions Workflows
+
+**`.github/workflows/rendercv.yaml`** - CV build automation:
+- Triggers on changes to `cv/cv.yaml` or manual dispatch
+- Generates PDF, HTML, and other formats using RenderCV
+- Processes output with `cv/process_cv.py` for Jekyll
+- Auto-commits generated files
+
+**`.github/workflows/optimize-images.yaml`** - Image optimization automation:
+- Triggers when images are added/modified in `assets/images/` or `assets/files/`
+- Compresses PNG (lossless) and JPEG (quality=85)
+- On push to main: Auto-commits optimized images with `[skip ci]`
+- On PRs: Posts optimization report as a comment
+- Prevents infinite loops with `[skip ci]` flag
+
+See `.github/workflows/README.md` for testing with `act`.
 
 ### Site Structure
 

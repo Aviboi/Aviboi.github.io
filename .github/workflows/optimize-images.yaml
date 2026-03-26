@@ -1,0 +1,188 @@
+name: Optimize Images
+
+on:
+  push:
+    paths:
+      - 'assets/images/**'
+      - 'assets/files/**'
+  pull_request:
+    paths:
+      - 'assets/images/**'
+      - 'assets/files/**'
+  workflow_dispatch:   # Allow manual trigger
+
+jobs:
+  optimize-images:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write   # For PR comments
+    
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # Fetch all history for proper diff
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      
+      - name: Install dependencies
+        run: pip install Pillow
+      
+      - name: Get list of modified images
+        id: changed-files
+        run: |
+          if [ "${{ github.event_name }}" == "pull_request" ]; then
+            BASE_SHA="${{ github.event.pull_request.base.sha }}"
+            HEAD_SHA="${{ github.event.pull_request.head.sha }}"
+          else
+            # For push events, compare with previous commit
+            BASE_SHA="${{ github.event.before }}"
+            HEAD_SHA="${{ github.sha }}"
+          fi
+          
+          echo "Comparing $BASE_SHA...$HEAD_SHA"
+          
+          # Get changed image files
+          CHANGED_IMAGES=$(git diff --name-only --diff-filter=AM $BASE_SHA $HEAD_SHA | grep -E '\.(jpg|jpeg|png)$' || true)
+          
+          if [ -z "$CHANGED_IMAGES" ]; then
+            echo "No image files changed"
+            echo "has_images=false" >> $GITHUB_OUTPUT
+          else
+            echo "Changed images:"
+            echo "$CHANGED_IMAGES"
+            echo "has_images=true" >> $GITHUB_OUTPUT
+            echo "$CHANGED_IMAGES" > changed_images.txt
+          fi
+      
+      - name: Check image sizes before optimization
+        if: steps.changed-files.outputs.has_images == 'true'
+        id: before-sizes
+        run: |
+          echo "## Image Sizes Before Optimization" > report.txt
+          while IFS= read -r file; do
+            if [ -f "$file" ]; then
+              size=$(stat -f%z "$file" 2>/dev/null || stat -c%s "$file" 2>/dev/null)
+              size_kb=$(echo "scale=2; $size/1024" | bc)
+              echo "- \`$file\`: ${size_kb}KB" >> report.txt
+            fi
+          done < changed_images.txt
+      
+      - name: Optimize images
+        if: steps.changed-files.outputs.has_images == 'true'
+        run: |
+          # Optimize each changed image
+          while IFS= read -r file; do
+            if [ -f "$file" ]; then
+              echo "Optimizing $file..."
+              python3 -c "
+from PIL import Image
+from pathlib import Path
+import sys
+
+file_path = Path('$file')
+img = Image.open(file_path)
+
+if file_path.suffix.lower() in ['.jpg', '.jpeg']:
+    img.save(file_path, 'JPEG', optimize=True, quality=85)
+elif file_path.suffix.lower() == '.png':
+    img.save(file_path, 'PNG', optimize=True)
+"
+            fi
+          done < changed_images.txt
+      
+      - name: Check image sizes after optimization
+        if: steps.changed-files.outputs.has_images == 'true'
+        id: after-sizes
+        run: |
+          echo "" >> report.txt
+          echo "## Image Sizes After Optimization" >> report.txt
+          
+          total_before=0
+          total_after=0
+          
+          while IFS= read -r file; do
+            if [ -f "$file" ]; then
+              size=$(stat -f%z "$file" 2>/dev/null || stat -c%s "$file" 2>/dev/null)
+              size_kb=$(echo "scale=2; $size/1024" | bc)
+              echo "- \`$file\`: ${size_kb}KB" >> report.txt
+              
+              # Get original size from git
+              orig_size=$(git show HEAD:"$file" 2>/dev/null | wc -c || echo "0")
+              total_before=$((total_before + orig_size))
+              total_after=$((total_after + size))
+            fi
+          done < changed_images.txt
+          
+          if [ $total_before -gt 0 ]; then
+            savings=$(echo "scale=1; (1 - $total_after/$total_before)*100" | bc)
+            before_kb=$(echo "scale=2; $total_before/1024" | bc)
+            after_kb=$(echo "scale=2; $total_after/1024" | bc)
+            saved_kb=$(echo "scale=2; ($total_before - $total_after)/1024" | bc)
+            
+            echo "" >> report.txt
+            echo "## Summary" >> report.txt
+            echo "- **Total before**: ${before_kb}KB" >> report.txt
+            echo "- **Total after**: ${after_kb}KB" >> report.txt
+            echo "- **Saved**: ${saved_kb}KB (${savings}%)" >> report.txt
+            
+            # Save for later steps
+            echo "savings=$savings" >> $GITHUB_OUTPUT
+            echo "saved_kb=$saved_kb" >> $GITHUB_OUTPUT
+          fi
+          
+          cat report.txt
+      
+      - name: Commit optimized images (push to main)
+        if: steps.changed-files.outputs.has_images == 'true' && github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          while IFS= read -r file; do
+            if [ -f "$file" ]; then
+              git add "$file"
+            fi
+          done < changed_images.txt
+          
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            savings="${{ steps.after-sizes.outputs.savings }}"
+            saved_kb="${{ steps.after-sizes.outputs.saved_kb }}"
+            git commit -m "chore: optimize images [automated]
+
+Compressed images with ${savings}% reduction (saved ${saved_kb}KB)
+            
+[skip ci]"
+            git push
+          fi
+      
+      - name: Comment on PR
+        if: steps.changed-files.outputs.has_images == 'true' && github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const report = fs.readFileSync('report.txt', 'utf8');
+            
+            const comment = `## 🖼️ Image Optimization Report
+            
+${report}
+
+*Images have been automatically optimized. The changes are ready to be committed.*`;
+            
+            github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: comment
+            });
+      
+      - name: No images to optimize
+        if: steps.changed-files.outputs.has_images == 'false'
+        run: echo "✅ No image files were changed in this commit"
