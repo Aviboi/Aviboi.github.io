@@ -2,7 +2,15 @@
 layout: page
 title: ENGRD 2020 Nutcracker Design
 year-month: "2026-02"
-description: A design exercise for my introductory statics course at Cornell.
+description: "Mechanical design project for a nutcracker using statics principles. Analysis of force amplification, mechanical advantage, and ergonomic constraints for cracking macadamia nuts."
+keywords: "mechanical design, statics, nutcracker design, force analysis, mechanical advantage, Cornell ENGRD 2020, engineering coursework"
+author: "Avram Dreyer"
+image: /assets/images/diagram.png
+og:type: article
+og:title: "Nutcracker Mechanical Design Project"
+og:description: "Design and analysis of a handheld nutcracker using mechanical engineering principles"
+og:image: /assets/images/diagram.png
+twitter:card: summary_large_image
 permalink: /projects/nutcracker/
 math: true
 visible: true

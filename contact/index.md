@@ -1,7 +1,13 @@
 ---
 layout: page
 title: "Contact"
-description: "Contact links for Avram Dreyer, mechanical engineering student at Cornell University"
+description: "Get in touch with Avram Dreyer - mechanical engineering student at Cornell University. Connect for research opportunities or project collaborations."
+keywords: "contact, Avram Dreyer, Cornell engineering, mechanical engineering student, research collaboration"
+author: "Avram Dreyer"
+og:type: website
+og:title: "Contact Avram Dreyer"
+og:description: "Connect with Avram Dreyer for research opportunities and engineering collaborations"
+twitter:card: summary
 permalink: /contact/
 ---
 

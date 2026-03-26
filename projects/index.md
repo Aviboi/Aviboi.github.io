@@ -1,6 +1,13 @@
 ---
 layout: page
 title: Projects
+description: "Engineering projects by Avram Dreyer including NASA HUNCH satellite design, autonomous sailboat development, and mechanical engineering coursework"
+keywords: "engineering projects, mechanical design, NASA HUNCH, CubeSat thermal management, autonomous sailboat, Cornell engineering"
+author: "Avram Dreyer"
+og:type: website
+og:title: "Avram Dreyer - Engineering Projects"
+og:description: "Explore mechanical engineering and aerospace projects including satellite thermal systems and autonomous vehicles"
+twitter:card: summary
 permalink: /projects/
 ---
 
