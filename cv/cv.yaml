@@ -100,7 +100,7 @@ design:
     bottom_margin: 2cm
     left_margin: 2cm
     right_margin: 2cm
-    show_footer: false
+    show_footer: true
     show_top_note: false
 
   colors:
@@ -174,6 +174,7 @@ design:
     allow_page_break: true
 
   templates:
+    footer: 'Last updated: CURRENT_DATE'
     one_line_entry:
       main_column: "**LABEL:** DETAILS"
     education_entry:

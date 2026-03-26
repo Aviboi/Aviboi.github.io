@@ -5,7 +5,7 @@
 #show: rendercv.with(
   name: "Avram Dreyer",
   title: "Avram Dreyer - CV",
-  footer: context { [#emph[Avram Dreyer -- #str(here().page())\/#str(counter(page).final().first())]] },
+  footer: context { [Last updated: Mar 2026] },
   top-note: [ #emph[Last updated in Mar 2026] ],
   locale-catalog-language: "en",
   text-direction: ltr,
@@ -14,7 +14,7 @@
   page-bottom-margin: 2cm,
   page-left-margin: 2cm,
   page-right-margin: 2cm,
-  page-show-footer: false,
+  page-show-footer: true,
   page-show-top-note: false,
   colors-body: rgb(0, 0, 0),
   colors-name: rgb(0, 0, 0),
@@ -81,7 +81,7 @@
   date: datetime(
     year: 2026,
     month: 3,
-    day: 24,
+    day: 25,
   ),
 )
 
