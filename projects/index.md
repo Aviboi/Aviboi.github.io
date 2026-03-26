@@ -9,7 +9,7 @@ permalink: /projects/
 {% assign projects = site.pages 
   | where_exp: "p", "p.path contains 'projects/'" 
   | where_exp: "p", "p.path != 'projects/index.md'"
-  | sort: "date" 
+  | sort: "year-month" 
   | reverse %}
 
 {% for project in projects %}
@@ -18,8 +18,8 @@ permalink: /projects/
   <a href="{{ project.url | relative_url }}" class="project-title">
     {{ project.title }}
   </a>
-  {% if project.date %}
-    <span class="project-date">{{ project.date }}</span>
+  {% if project.year-month %}
+    <span class="project-date">{{ project.year-month }}</span>
   {% endif %}
   {% if project.description %}
     <p class="project-description">{{ project.description }}</p>

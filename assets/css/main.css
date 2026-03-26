@@ -12,7 +12,7 @@
   --color-link-hover: #1a3f80;
 
   --font-serif:       'EB Garamond', Georgia, serif;
-  --font-mono:        'Overpass Mono', 'Courier New', monospace;
+  --font-mono:        'SUSE', 'Futura', sans-serif;
 
   --sidebar-width:    260px;
   --content-max:      680px;
@@ -124,7 +124,7 @@ ul {
 .nav-link {
   font-family: var(--font-mono);
   font-size: 0.72rem;
-  font-weight: 300;
+  font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--color-muted);
