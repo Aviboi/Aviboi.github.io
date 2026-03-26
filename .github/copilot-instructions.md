@@ -29,6 +29,20 @@ bundle exec jekyll serve --livereload
 bundle exec jekyll build
 ```
 
+### Image Optimization
+
+Before adding new images, optimize them to reduce file sizes:
+
+```bash
+# Requires: pip install Pillow
+python scripts/optimize-images.py
+
+# Check what would be optimized without modifying
+python scripts/optimize-images.py --check-only
+```
+
+See `scripts/README.md` for more options.
+
 ### CV Generation
 
 The CV is automatically generated from `cv/cv.yaml` via GitHub Actions when changes are pushed. To test locally with act:
@@ -150,3 +164,26 @@ All site metadata is in `_config.yml`:
 - Gems cached in `bundle_cache` volume for faster rebuilds
 - Live reload enabled with `--force_polling` (required for Docker volumes)
 - Both Jekyll (4000) and livereload (35729) ports exposed
+
+## Performance Optimizations
+
+### Images
+- All images in `assets/images/` should be optimized using `scripts/optimize-images.py`
+- Images use `loading="lazy"` attribute for lazy loading
+- Include descriptive `alt` text for accessibility
+
+### Fonts
+- Only load required font weights (EB Garamond and SUSE)
+- Use `font-display: swap` via Google Fonts URL parameter
+- Preconnect to Google Fonts domains
+
+### JavaScript
+- Font Awesome loaded with `defer` attribute
+- MathJax only loaded on pages with `math: true` front matter
+- Minimal custom JavaScript in `assets/js/main.js`
+
+### SEO
+- All pages have custom meta descriptions and keywords
+- Open Graph images for social sharing
+- `robots.txt` allows all crawlers and references sitemap
+- Jekyll SEO tag plugin generates structured data automatically
