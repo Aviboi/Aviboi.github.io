@@ -38,16 +38,19 @@ jobs:
           if [ "${{ github.event_name }}" == "pull_request" ]; then
             BASE_SHA="${{ github.event.pull_request.base.sha }}"
             HEAD_SHA="${{ github.event.pull_request.head.sha }}"
+            CHANGED_IMAGES=$(git diff --name-only --diff-filter=AM $BASE_SHA $HEAD_SHA | grep -E '\.(jpg|jpeg|png)$' || true)
+          elif [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
+            # For manual triggers, optimize all images in the repo
+            CHANGED_IMAGES=$(find assets/images assets/files -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" 2>/dev/null || true)
           else
-            # For push events, compare with previous commit
             BASE_SHA="${{ github.event.before }}"
             HEAD_SHA="${{ github.sha }}"
+            # Guard against null SHA on first push
+            if [ "$BASE_SHA" == "0000000000000000000000000000000000000000" ]; then
+              BASE_SHA=$(git rev-list --max-parents=0 HEAD)
+            fi
+            CHANGED_IMAGES=$(git diff --name-only --diff-filter=AM $BASE_SHA $HEAD_SHA | grep -E '\.(jpg|jpeg|png)$' || true)
           fi
-          
-          echo "Comparing $BASE_SHA...$HEAD_SHA"
-          
-          # Get changed image files
-          CHANGED_IMAGES=$(git diff --name-only --diff-filter=AM $BASE_SHA $HEAD_SHA | grep -E '\.(jpg|jpeg|png)$' || true)
           
           if [ -z "$CHANGED_IMAGES" ]; then
             echo "No image files changed"
@@ -66,7 +69,7 @@ jobs:
           echo "## Image Sizes Before Optimization" > report.txt
           while IFS= read -r file; do
             if [ -f "$file" ]; then
-              size=$(stat -f%z "$file" 2>/dev/null || stat -c%s "$file" 2>/dev/null)
+              size=$(stat -c%s "$file")
               size_kb=$(echo "scale=2; $size/1024" | bc)
               echo "- \`$file\`: ${size_kb}KB" >> report.txt
             fi
@@ -75,18 +78,16 @@ jobs:
       - name: Optimize images
         if: steps.changed-files.outputs.has_images == 'true'
         run: |
-          # Optimize each changed image
           while IFS= read -r file; do
             if [ -f "$file" ]; then
               echo "Optimizing $file..."
-              python3 -c "
+              IMAGE_PATH="$file" python3 -c "
+import os
 from PIL import Image
 from pathlib import Path
-import sys
 
-file_path = Path('$file')
+file_path = Path(os.environ['IMAGE_PATH'])
 img = Image.open(file_path)
-
 if file_path.suffix.lower() in ['.jpg', '.jpeg']:
     img.save(file_path, 'JPEG', optimize=True, quality=85)
 elif file_path.suffix.lower() == '.png':
@@ -107,7 +108,7 @@ elif file_path.suffix.lower() == '.png':
           
           while IFS= read -r file; do
             if [ -f "$file" ]; then
-              size=$(stat -f%z "$file" 2>/dev/null || stat -c%s "$file" 2>/dev/null)
+              size=$(stat -c%s "$file")
               size_kb=$(echo "scale=2; $size/1024" | bc)
               echo "- \`$file\`: ${size_kb}KB" >> report.txt
               
