@@ -1,0 +1,14 @@
+## Image Sizes Before Optimization
+- `assets/images/Balantiocheilos_melanopterus_-_Karlsruhe_Zoo_02_(cropped) - Copy.jpg`: 11.38KB
+- `assets/images/diagram.png`: 172.18KB
+- `assets/images/headshot.jpg`: 54.63KB
+
+## Image Sizes After Optimization
+- `assets/images/Balantiocheilos_melanopterus_-_Karlsruhe_Zoo_02_(cropped) - Copy.jpg`: 10.40KB
+- `assets/images/diagram.png`: 172.18KB
+- `assets/images/headshot.jpg`: 53.40KB
+
+## Summary
+- **Total before**: 238.21KB
+- **Total after**: 235.99KB
+- **Saved**: 2.21KB (10.0%)
