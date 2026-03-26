@@ -490,3 +490,58 @@ blockquote {
   padding-bottom: 1rem;
   font-size: 20px;
 }
+
+/* ============================================================
+   BACK TO TOP BUTTON
+   ============================================================ */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 90;
+  opacity: 0.8;
+}
+
+.back-to-top:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.back-to-top:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .back-to-top {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.25rem;
+  }
+}
+
+/* Hide back to top on print */
+@media print {
+  .back-to-top {
+    display: none !important;
+  }
+  
+  .sidebar-nav.print-expand {
+    display: block !important;
+  }
+}
